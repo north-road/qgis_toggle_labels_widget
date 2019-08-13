@@ -16,8 +16,8 @@ email=nyall@north-road.com
 
 about=A layer tree widget for quick toggling of labels in a layer
 
-tracker=https://github.com/north-road/qgis-project-colors-dock/issues
-repository=https://github.com/north-road/qgis-project-colors-dock
+tracker=https://github.com/north-road/qgis_toggle_labels_widget/issues
+repository=https://github.com/north-road/qgis_toggle_labels_widget
 # End of mandatory metadata
 
 # Recommended items:
@@ -28,11 +28,11 @@ repository=https://github.com/north-road/qgis-project-colors-dock
 # Tags are comma separated with spaces allowed
 tags=python
 
-homepage=https://github.com/north-road/qgis-project-colors-dock
+homepage=https://github.com/north-road/qgis_toggle_labels_widget
 category=Plugins
 icon=icon.png
 # experimental flag
-experimental=True
+experimental=False
 
 # deprecated flag (applies to the whole plugin, not just a single version)
 deprecated=False

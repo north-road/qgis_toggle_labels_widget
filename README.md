@@ -1,2 +1,2 @@
-# qgis-project-colors-dock
+# qgis-toggle-labels-widget
 QGIS plugin adding a checkbox widget for toggling labels in a layer
