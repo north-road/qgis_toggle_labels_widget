@@ -35,7 +35,7 @@ from qgis.gui import (
     QgsLayerTreeEmbeddedWidgetProvider
 )
 
-VERSION = '1.0.0'
+VERSION = '1.0.1'
 
 
 class LayerTreeToggleLabelsWidget(QWidget):
@@ -123,5 +123,5 @@ class ToggleLabelsWidgetPlugin:
 
     def unload(self):
         """Removes the plugin menu item and icon from QGIS GUI."""
-        QgsGui.layerTreeEmbeddedWidgetRegistry().removeProvider(self.provider)
+        QgsGui.layerTreeEmbeddedWidgetRegistry().removeProvider(self.provider.id())
         self.provider = None
