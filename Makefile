@@ -112,3 +112,24 @@ pycodestyle:
 	@echo "-----------"
 	@echo "Ignored in PEP8 check:"
 	@echo $(PEP8EXCLUDE)
+
+# The dclean target removes compiled python files from plugin directory
+# also deletes any .git entry
+dclean:
+	@echo
+	@echo "-----------------------------------"
+	@echo "Removing any compiled python files."
+	@echo "-----------------------------------"
+	find $(PLUGINNAME) -iname "*.pyc" -delete
+	find $(PLUGINNAME) -iname "*.orig" -delete
+	find $(PLUGINNAME) -iname ".git" -prune -exec rm -Rf {} \;
+
+zip: dclean
+	@echo
+	@echo "---------------------------"
+	@echo "Creating plugin zip bundle."
+	@echo "---------------------------"
+	# The zip target deploys the plugin and creates a zip file with the deployed
+	# content. You can then upload the zip file on http://plugins.qgis.org
+	rm -f $(PLUGINNAME).zip
+	zip -9 -r  $(PLUGINNAME).zip $(PLUGINNAME) -x '*.git*' -x '*__pycache__*' -x '*test*'
