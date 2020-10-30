@@ -57,8 +57,8 @@ class LayerTreeToggleLabelsWidget(QWidget):
 
         # init from layer
         if self.layer.type() == QgsMapLayer.VectorLayer:
-            self.checkbox.toggled.connect(self.toggled)
             self.checkbox.setChecked(self.layer.labelsEnabled())
+            self.checkbox.toggled.connect(self.toggled)
 
     def toggled(self, active):
         """
