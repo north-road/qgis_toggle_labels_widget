@@ -10,7 +10,7 @@
 name=Layer Tree Toggle Labels Widget
 qgisMinimumVersion=3.4
 description=A layer tree widget for quick toggling of labels in a layer
-version=1.0.1
+version=1.0.2
 author=North Road
 email=nyall@north-road.com
 
@@ -23,7 +23,8 @@ repository=https://github.com/north-road/qgis_toggle_labels_widget
 # Recommended items:
 
 # Uncomment the following line and add your changelog:
-changelog=1.0.1 Fix exception when exiting plugin
+changelog=1.0.2 Avoid needless map refreshes
+    1.0.1 Fix exception when exiting plugin
 
 # Tags are comma separated with spaces allowed
 tags=python
